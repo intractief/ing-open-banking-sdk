@@ -135,7 +135,7 @@ The 1st step is to import the required classes.
 import com.ing.developer.common.Utils;
 import com.ing.developer.common.clients.Companion;
 import com.ing.developer.common.clients.OpenBankingOAuthApi;
-import javax.ws.rs.client.Client;
+import jakarta.ws.rs.client.Client;
 ```
 
 The OpenBankingOAuthApi requires a keyId, trustMaterial and Client.
@@ -177,7 +177,7 @@ import com.ing.developer.common.Utils;
 import com.ing.developer.common.clients.Companion;
 import com.ing.developer.common.clients.OpenBankingOAuthApi;
 
-import javax.ws.rs.client.Client;
+import jakarta.ws.rs.client.Client;
 import java.security.PrivateKey;
 import java.security.cert.Certificate;
 
@@ -225,7 +225,7 @@ import com.ing.developer.common.clients.Companion;
 import com.ing.developer.common.clients.OpenBankingOAuthApi;
 import org.openapitools.client.model.TokenResponse;
 
-import javax.ws.rs.client.Client;
+import jakarta.ws.rs.client.Client;
 import java.security.PrivateKey;
 import java.security.cert.Certificate;
 
@@ -329,7 +329,7 @@ import com.ing.developer.common.Utils;
 import com.ing.developer.common.clients.Companion;
 import org.openapitools.client.model.TokenResponse;
 
-import javax.ws.rs.client.ClientBuilder;
+import jakarta.ws.rs.client.ClientBuilder;
 import java.security.PrivateKey;
 import java.util.List;
 import java.util.UUID;
@@ -420,7 +420,7 @@ import com.ing.developer.payment.request.client.model.CertificateResponse;
 import com.ing.developer.payment.request.client.model.DailyReceivableLimit;
 import com.ing.developer.payment.request.client.model.RegistrationRequest;
 
-import javax.ws.rs.client.ClientBuilder;
+import jakarta.ws.rs.client.ClientBuilder;
 import java.math.BigDecimal;
 import java.security.PrivateKey;
 
@@ -494,7 +494,7 @@ import com.ing.developer.common.clients.Companion;
 import com.ing.developer.showcase.client.ApiException;
 import com.ing.developer.showcase.client.api.GreetingsApi;
 
-import javax.ws.rs.client.ClientBuilder;
+import jakarta.ws.rs.client.ClientBuilder;
 import java.security.PrivateKey;
 
 public class ProductionShowcaseAPI {
@@ -537,7 +537,7 @@ import com.ing.developer.common.clients.Companion;
 import com.ing.developer.showcase.client.ApiException;
 import com.ing.developer.showcase.client.api.GreetingsApi;
 
-import javax.ws.rs.client.ClientBuilder;
+import jakarta.ws.rs.client.ClientBuilder;
 import java.security.PrivateKey;
 
 public class ProductionShowcaseAPI {
@@ -581,7 +581,7 @@ import com.ing.developer.common.clients.Companion;
 import com.ing.developer.showcase.client.ApiException;
 import com.ing.developer.showcase.client.api.GreetingsApi;
 
-import javax.ws.rs.client.ClientBuilder;
+import jakarta.ws.rs.client.ClientBuilder;
 import java.security.PrivateKey;
 
 public class ProductionShowcaseAPI {
@@ -645,7 +645,7 @@ import com.ing.developer.common.clients.Companion;
 import com.ing.developer.showcase.client.ApiException;
 import com.ing.developer.showcase.client.api.GreetingsApi;
 
-import javax.ws.rs.client.ClientBuilder;
+import jakarta.ws.rs.client.ClientBuilder;
 import java.security.PrivateKey;
 
 public class ProductionShowcaseAPI {

@@ -107,6 +107,7 @@
                     <configOptions>
                         <dateLibrary>java8</dateLibrary>
                         <library>jersey2</library>
+                        <useJakartaEe>true</useJakartaEe>
                     </configOptions>
                 </configuration>
                 <executions>
