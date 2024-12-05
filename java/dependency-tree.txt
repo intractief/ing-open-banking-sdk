@@ -1,0 +1,1 @@
+com.ing.developer:ing-open-banking-java-sdk:pom:0.0.3-SNAPSHOT
