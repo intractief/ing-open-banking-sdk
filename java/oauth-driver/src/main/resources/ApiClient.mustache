@@ -1152,7 +1152,7 @@ public class ApiClient{{#jsr310}} extends JavaTimeFormatter{{/jsr310}} {
 
       {{#hasOAuthMethods}}
       // If OAuth is used and a status 401 is received, renew the access token and retry the request
-      if (response.getStatusInfo() == Status.UNAUTHORIZED) {
+      if (response.getStatusInfo() == Status.UNAUTHORIZED && authNames!=null) {
         for (String authName : authNames) {
           Authentication authentication = authentications.get(authName);
           if (authentication instanceof OAuth) {
