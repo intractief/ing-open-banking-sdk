@@ -9,7 +9,9 @@ import io.swagger.v3.oas.models.parameters.Parameter;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
+import java.util.Collection;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 import org.openapitools.codegen.languages.JavaClientCodegen;
 
 public class JavaOpenBankingCodegen extends JavaClientCodegen {
@@ -28,13 +30,11 @@ public class JavaOpenBankingCodegen extends JavaClientCodegen {
 
   @Override
   public void preprocessOpenAPI(OpenAPI openAPI) {
-    if (openAPI != null && openAPI.getPaths() != null) {
-      for (Map.Entry<String, PathItem> entry : openAPI.getPaths().entrySet()) {
-        entry.getValue()
-                .readOperations()
-                .forEach(JavaOpenBankingCodegen::updateParameters);
-      }
-    }
+    Stream.ofNullable(openAPI)
+            .map(OpenAPI::getPaths)
+            .map(Map::values).flatMap(Collection::stream)
+            .map(PathItem::readOperations).flatMap(Collection::stream)
+            .forEach(JavaOpenBankingCodegen::updateParameters);
     super.preprocessOpenAPI(openAPI);
   }
 
@@ -44,7 +44,7 @@ public class JavaOpenBankingCodegen extends JavaClientCodegen {
     }
     List<Parameter> includedParams = operation.getParameters().stream()
         .filter(not(p -> EXCLUDED_PARAMS.contains(p.getName())))
-        .collect(Collectors.toList());
+        .collect(Collectors.toUnmodifiableList());
     includedParams.stream()
         .filter(p -> NON_REQUIRED_PARAMS.contains(p.getName()))
         .forEach(p -> p.required(false));
