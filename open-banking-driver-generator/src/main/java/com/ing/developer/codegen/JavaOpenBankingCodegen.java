@@ -14,6 +14,7 @@ import org.openapitools.codegen.languages.JavaClientCodegen;
 
 public class JavaOpenBankingCodegen extends JavaClientCodegen {
   private static final List<String> EXCLUDED_PARAMS = Arrays.asList("Signature", "Digest", "Date");
+  private static final List<String> NON_REQUIRED_PARAMS = Arrays.asList("Authorization", "X-JWS-Signature");
 
   @Override
   public String getName() {
@@ -34,9 +35,8 @@ public class JavaOpenBankingCodegen extends JavaClientCodegen {
             List<Parameter> includedParams = operation.getParameters().stream()
                 .filter(not(p -> EXCLUDED_PARAMS.contains(p.getName())))
                 .collect(Collectors.toList());
-            includedParams.stream().filter(p -> "Authorization".equals(p.getName()))
-                .forEach(p -> p.required(false));
-            includedParams.stream().filter(p -> "X-JWS-Signature".equals(p.getName()))
+            includedParams.stream()
+                .filter(p -> NON_REQUIRED_PARAMS.contains(p.getName()))
                 .forEach(p -> p.required(false));
             operation.setParameters(includedParams);
           }
