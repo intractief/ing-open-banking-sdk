@@ -19,7 +19,6 @@ com.ing.developer:open-banking-common:jar:0.0.3-SNAPSHOT
 |  |  \- org.glassfish.hk2:hk2-utils:jar:3.0.6:compile
 |  \- org.javassist:javassist:jar:3.30.2-GA:compile
 +- com.ing.developer:oauth-driver:jar:0.0.3-SNAPSHOT:compile
-|  +- com.google.code.findbugs:jsr305:jar:3.0.2:compile
 |  +- org.glassfish.jersey.media:jersey-media-multipart:jar:3.0.16:compile
 |  |  \- org.jvnet.mimepull:mimepull:jar:1.9.15:compile
 |  +- org.glassfish.jersey.media:jersey-media-json-jackson:jar:3.0.16:compile

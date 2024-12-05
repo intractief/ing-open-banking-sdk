@@ -19,14 +19,6 @@
     </properties>
 
     <dependencies>
-
-        <!-- @Nullable annotation -->
-        <dependency>
-            <groupId>com.google.code.findbugs</groupId>
-            <artifactId>jsr305</artifactId>
-            <version>${jsr305.version}</version>
-        </dependency>
-
         <!-- HTTP client: jersey-client -->
         <dependency>
             <groupId>org.glassfish.jersey.core</groupId>
@@ -99,6 +91,7 @@
                         <dateLibrary>java8</dateLibrary>
                         <library>jersey2</library>
                         <useJakartaEe>true</useJakartaEe>
+                        <openApiNullable>true</openApiNullable>
                     </configOptions>
                 </configuration>
                 <executions>

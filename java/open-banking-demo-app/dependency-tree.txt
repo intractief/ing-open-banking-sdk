@@ -41,7 +41,6 @@ com.ing.developer:open-banking-demo-app:jar:0.0.3-SNAPSHOT
 |  +- com.ing.developer:oauth-driver:jar:0.0.3-SNAPSHOT:compile
 |  \- org.tomitribe:tomitribe-http-signatures:jar:1.8:compile
 +- com.ing.developer:open-banking-account-information-driver:jar:0.0.3-SNAPSHOT:compile
-|  +- com.google.code.findbugs:jsr305:jar:3.0.2:compile
 |  +- org.glassfish.jersey.media:jersey-media-multipart:jar:3.1.9:compile
 |  |  \- org.jvnet.mimepull:mimepull:jar:1.9.15:compile
 |  +- org.glassfish.jersey.media:jersey-media-json-jackson:jar:3.1.9:compile
