@@ -43,7 +43,7 @@ public class AccountInformationService {
     public List<Account> getAccounts(UUID uuid) {
         Token customerAccessToken = customerTokenService.getCustomerAccessToken(uuid);
         if (customerAccessToken == null)
-            throw new OpenBankingHttpForbiddenException(Account.class.getSimpleName() + "<br><br><a href=\"/account/authorize\">Authorize</a>");
+            throw new OpenBankingHttpForbiddenException(Account.class.getSimpleName(),"<br><br><a href=\"/account/authorize\">Authorize</a>");
         return adapter.getAccounts(customerAccessToken.getAccessToken());
     }
 

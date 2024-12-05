@@ -32,10 +32,10 @@ public class Utils {
     }
 
     public static <T> T throwHttpExceptionBasedOnStatusCode(int statusCode, String resourceSimpleName, String message) {
-        if (statusCode == 400) throw new OpenBankingHttpBadRequestException(resourceSimpleName);
-        if (statusCode == 401) throw new OpenBankingHttpUnauthorizedException(resourceSimpleName);
-        if (statusCode == 403) throw new OpenBankingHttpForbiddenException(resourceSimpleName);
-        if (statusCode == 404) throw new OpenBankingHttpNotFoundException(resourceSimpleName);
+        if (statusCode == 400) throw new OpenBankingHttpBadRequestException(resourceSimpleName, message);
+        if (statusCode == 401) throw new OpenBankingHttpUnauthorizedException(resourceSimpleName, message);
+        if (statusCode == 403) throw new OpenBankingHttpForbiddenException(resourceSimpleName, message);
+        if (statusCode == 404) throw new OpenBankingHttpNotFoundException(resourceSimpleName, message);
         throw new OpenBankingHttpException(message);
     }
 
