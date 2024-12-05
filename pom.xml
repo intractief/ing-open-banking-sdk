@@ -19,6 +19,7 @@
     </distributionManagement>
 
     <properties>
+        <maven.compiler.release>17</maven.compiler.release>
         <openapi-generator-maven-plugin.version>5.2.1</openapi-generator-maven-plugin.version>
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
     </properties>

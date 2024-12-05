@@ -17,7 +17,7 @@
     <description>Open Banking simple app for testing purposes</description>
 
     <properties>
-        <java.version>11</java.version>
+        <java.version>17</java.version>
         <open-banking-sdk.version>0.0.3-SNAPSHOT</open-banking-sdk.version>
         <jackson.version>2.12.7.1</jackson.version>
         <maven.deploy.skip>true</maven.deploy.skip>

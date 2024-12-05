@@ -69,7 +69,7 @@ public class OBSigner {
 
         } else {
 
-            throw new UnsupportedAlgorithmException(String.format("Unknown Algorithm type %s %s", algorithm.getPortableName(), algorithm.getType().getName()));
+            throw new UnsupportedAlgorithmException("Unknown Algorithm type %s %s".formatted(algorithm.getPortableName(), algorithm.getType().getName()));
         }
 
         // check that the JVM really knows the algorithm we are going to use

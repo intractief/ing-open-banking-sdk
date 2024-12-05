@@ -9,14 +9,14 @@
     <version>0.0.3-SNAPSHOT</version>
 
     <properties>
-        <java.version>11</java.version>
+        <java.version>17</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <openapi-generator-version>7.4.0</openapi-generator-version>
         <junit.version>5.8.1</junit.version>
 
         <maven-plugin-version>1.0.0</maven-plugin-version>
         <maven-clean-plugin>3.1.0</maven-clean-plugin>
-        <maven-compiler-plugin.version>3.6.1</maven-compiler-plugin.version>
+        <maven-compiler-plugin.version>3.13.0</maven-compiler-plugin.version>
         <maven-surefire-plugin.version>2.12</maven-surefire-plugin.version>
         <maven-enforcer-plugin.version>3.0.0-M1</maven-enforcer-plugin.version>
         <maven-jar-plugin.version>2.2</maven-jar-plugin.version>
@@ -146,8 +146,7 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>${maven-compiler-plugin.version}</version>
                 <configuration>
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
+                    <release>${java.version}</release>
                 </configuration>
             </plugin>
         </plugins>
