@@ -13,8 +13,7 @@ import java.util.stream.Collectors;
 import org.openapitools.codegen.languages.JavaClientCodegen;
 
 public class JavaOpenBankingCodegen extends JavaClientCodegen {
-
-  private final List<String> excludedParams = Arrays.asList("Signature", "Digest", "Date");
+  private static final List<String> EXCLUDED_PARAMS = Arrays.asList("Signature", "Digest", "Date");
 
   @Override
   public String getName() {
@@ -33,7 +32,7 @@ public class JavaOpenBankingCodegen extends JavaClientCodegen {
         for (Operation operation : entry.getValue().readOperations()) {
           if (operation.getParameters() != null) {
             List<Parameter> includedParams = operation.getParameters().stream()
-                .filter(not(p -> excludedParams.contains(p.getName())))
+                .filter(not(p -> EXCLUDED_PARAMS.contains(p.getName())))
                 .collect(Collectors.toList());
             includedParams.stream().filter(p -> "Authorization".equals(p.getName()))
                 .forEach(p -> p.required(false));
