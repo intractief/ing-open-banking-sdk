@@ -30,19 +30,24 @@ public class JavaOpenBankingCodegen extends JavaClientCodegen {
   public void preprocessOpenAPI(OpenAPI openAPI) {
     if (openAPI != null && openAPI.getPaths() != null) {
       for (Map.Entry<String, PathItem> entry : openAPI.getPaths().entrySet()) {
-        for (Operation operation : entry.getValue().readOperations()) {
-          if (operation.getParameters() != null) {
-            List<Parameter> includedParams = operation.getParameters().stream()
-                .filter(not(p -> EXCLUDED_PARAMS.contains(p.getName())))
-                .collect(Collectors.toList());
-            includedParams.stream()
-                .filter(p -> NON_REQUIRED_PARAMS.contains(p.getName()))
-                .forEach(p -> p.required(false));
-            operation.setParameters(includedParams);
-          }
-        }
+        entry.getValue()
+                .readOperations()
+                .forEach(JavaOpenBankingCodegen::updateParameters);
       }
     }
     super.preprocessOpenAPI(openAPI);
+  }
+
+  private static void updateParameters(Operation operation) {
+    if(operation.getParameters()==null) {
+      return;
+    }
+    List<Parameter> includedParams = operation.getParameters().stream()
+        .filter(not(p -> EXCLUDED_PARAMS.contains(p.getName())))
+        .collect(Collectors.toList());
+    includedParams.stream()
+        .filter(p -> NON_REQUIRED_PARAMS.contains(p.getName()))
+        .forEach(p -> p.required(false));
+    operation.setParameters(includedParams);
   }
 }
