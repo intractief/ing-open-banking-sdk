@@ -2,7 +2,7 @@ package com.ing.developer.common.clients;
 
 import com.ing.developer.common.Utils.Pair;
 import com.ing.developer.common.exceptions.OpenBankingException;
-import org.apache.http.ssl.SSLContextBuilder;
+import org.apache.hc.core5.ssl.SSLContextBuilder;
 import org.glassfish.jersey.client.ClientConfig;
 import org.glassfish.jersey.client.ClientProperties;
 import org.glassfish.jersey.logging.LoggingFeature;

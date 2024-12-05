@@ -20,7 +20,7 @@ public class OAuthConfiguration {
     }
 
     @Bean
-    public OpenBankingOAuthApi openBankingOAuthApi() {
+    OpenBankingOAuthApi openBankingOAuthApi() {
         String keyId = env.getRequiredProperty("psd2.key-id");
         String keyStoreFileName = env.getRequiredProperty("psd2.keystore.name");
         char[] keyStorePassword = env.getRequiredProperty("psd2.keystore.password").toCharArray();

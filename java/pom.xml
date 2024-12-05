@@ -27,7 +27,7 @@
         <java.version>17</java.version>
         <open-banking-sdk.version>0.0.3-SNAPSHOT</open-banking-sdk.version>
 
-        <apache-httpclient.version>4.5.13</apache-httpclient.version>
+        <apache-httpclient.version>4.5.14</apache-httpclient.version>
         <jersey.version>3.0.16</jersey.version>
 
         <jackson.version>2.13.5</jackson.version>

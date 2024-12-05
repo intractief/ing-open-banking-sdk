@@ -33,7 +33,7 @@ public class GreetingsConfiguration {
     }
 
     @Bean
-    public ShowcaseApiApi greetingsApi() {
+    ShowcaseApiApi greetingsApi() {
         return new ShowcaseApiApi(buildClient());
     }
 

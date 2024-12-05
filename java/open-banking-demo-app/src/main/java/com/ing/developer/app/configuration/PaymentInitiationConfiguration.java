@@ -32,7 +32,7 @@ public class PaymentInitiationConfiguration {
     }
 
     @Bean
-    public SinglePaymentInitiationApi paymentInitiationServicePisApi() {
+    SinglePaymentInitiationApi paymentInitiationServicePisApi() {
         return new SinglePaymentInitiationApi(buildClient());
     }
 

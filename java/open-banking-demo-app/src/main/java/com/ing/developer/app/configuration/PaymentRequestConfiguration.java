@@ -32,7 +32,7 @@ public class PaymentRequestConfiguration {
     }
 
     @Bean
-    public RegistrationApi registrationApi() {
+    RegistrationApi registrationApi() {
         return new RegistrationApi(buildClient());
     }
 

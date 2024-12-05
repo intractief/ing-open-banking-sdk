@@ -32,7 +32,7 @@ public class AccountInformationConfiguration {
     }
 
     @Bean
-    public AccountDetailsApi accountDetailsApi() {
+    AccountDetailsApi accountDetailsApi() {
         return new AccountDetailsApi(buildClient());
     }
 
