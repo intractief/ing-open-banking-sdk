@@ -31,8 +31,6 @@
         <jackson-databind-nullable.version>0.2.6</jackson-databind-nullable.version>
         <tomitribe-http-signatures.version>1.8</tomitribe-http-signatures.version>
 
-        <junit.version>5.7.1</junit.version>
-
         <scribejava-apis.version>8.3.1</scribejava-apis.version>
         <maven-surefire-plugin.version>3.0.0-M4</maven-surefire-plugin.version>
     </properties>
