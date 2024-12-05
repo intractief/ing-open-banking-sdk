@@ -14,18 +14,17 @@ public class GreetingsResource {
     this.greetingsAdapter = greetingsAdapter;
   }
 
-  @GetMapping
-  @RequestMapping("/single")
+  @GetMapping("/single")
   public String single() {
     return greetingsAdapter.getGreeting();
   }
 
-  @RequestMapping("/mtls")
+  @GetMapping("/mtls")
   public String mtls() {
     return greetingsAdapter.getGreeting();
   }
 
-  @RequestMapping("/jws")
+  @GetMapping("/jws")
   public String jws() {
     return greetingsAdapter.getGreeting();
   }
