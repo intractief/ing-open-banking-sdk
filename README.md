@@ -12,7 +12,7 @@ You can use this SDK to generate drivers for both Premium and PSD2 APIs. Read ou
 - [x] Wrapper class for OAuth 2.0 technical driver (using OpenAPI Generator)
 
 ## Dependencies:
-* Java JDK 1.8+
+* Java JDK 17+
 * Maven 3.6+
 * CURL
 
