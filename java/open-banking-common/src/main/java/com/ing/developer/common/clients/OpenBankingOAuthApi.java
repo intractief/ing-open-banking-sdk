@@ -10,7 +10,7 @@ import org.openapitools.client.api.DefaultApi;
 import org.openapitools.client.model.AuthorizationURLResponse;
 import org.openapitools.client.model.TokenResponse;
 
-import javax.ws.rs.client.Client;
+import jakarta.ws.rs.client.Client;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
