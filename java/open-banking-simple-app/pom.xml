@@ -19,7 +19,6 @@
     <properties>
         <java.version>17</java.version>
         <open-banking-sdk.version>0.0.3-SNAPSHOT</open-banking-sdk.version>
-        <jackson.version>2.13.5</jackson.version>
         <maven.deploy.skip>true</maven.deploy.skip>
     </properties>
 
@@ -54,7 +53,6 @@
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
             <scope>runtime</scope>
-            <version>${jackson.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.httpcomponents.client5</groupId>

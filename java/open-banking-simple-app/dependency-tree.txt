@@ -34,7 +34,7 @@ com.ing.developer:open-banking-simple-app:jar:0.0.3-SNAPSHOT
 +- com.ing.developer:open-banking-payment-initiation-driver:jar:0.0.3-SNAPSHOT:compile
 +- com.ing.developer:open-banking-payment-request-driver:jar:0.0.3-SNAPSHOT:compile
 +- com.ing.developer:open-banking-showcase-driver:jar:0.0.3-SNAPSHOT:compile
-+- com.fasterxml.jackson.core:jackson-databind:jar:2.13.5:runtime
++- com.fasterxml.jackson.core:jackson-databind:jar:2.17.3:runtime
 \- org.apache.httpcomponents.client5:httpclient5:jar:5.3.1:runtime
    +- org.apache.httpcomponents.core5:httpcore5:jar:5.2.5:runtime
    +- org.apache.httpcomponents.core5:httpcore5-h2:jar:5.2.5:runtime
